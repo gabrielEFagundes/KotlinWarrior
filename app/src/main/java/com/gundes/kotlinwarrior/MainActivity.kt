@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -60,7 +61,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             color = Color.White,
             modifier = Modifier
                 .width(320.dp)
-                .height(320.dp),
+                .height(360.dp),
             shape = RoundedCornerShape(16.dp)
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally){
@@ -74,7 +75,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     text = "The Supreme Wizard",
                     modifier = Modifier.padding(bottom = 32.dp)
                 )
-                Row(modifier = Modifier.fillMaxWidth().padding(24.dp), horizontalArrangement = Arrangement.SpaceBetween){
+                Row(modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(24.dp), horizontalArrangement = Arrangement.SpaceBetween){
                     Text(
                         text = "LVL GOD",
                         color = Color.Blue,
@@ -89,11 +92,18 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     )
                 }
                 Text(
-                    text = "A formidable oponent, with his Daemonshark, he's able to summon the power of Java and CSS.",
-                    modifier = Modifier.padding(10.dp, 16.dp),
+                    text = "A formidable oponent, wields his Daemonshark",
+                    modifier = Modifier.padding(10.dp, 8.dp),
                     textAlign = TextAlign.Center,
-                    fontSize = 18.sp
+                    fontSize = 14.sp
                 )
+                Button(
+                    onClick = { /*TODO*/ },
+                    modifier = Modifier.fillMaxWidth()
+                        .padding(20.dp)
+                ) {
+                    Text(text = "Play")
+                }
             }
         }
     }
